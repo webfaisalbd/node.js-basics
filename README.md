@@ -25,4 +25,11 @@ or,
 node -v
 ```
 
+#### Node.js Modules
+- Module is a set of functions. (linke as js libraries such as Math)
+- 3 types of modules
+1. Local Modules (own created modules)
+2. Built in Modules (node.js own modules) - http, url, path, fs, os, events, stream, dns etc.  [No need to install].
+[Built in Modules](https://www.w3schools.com/nodejs/ref_modules.asp)
 
+3. External Modules (managed by npm)
