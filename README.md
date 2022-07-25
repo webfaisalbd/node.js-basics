@@ -204,3 +204,38 @@ console.log(os.hostname());
 console.log(totalmem());
 console.log(freemem());
 ```
+
+
+
+##### path module
+`The Path module provides a way of working with directories and file paths.`
+
+
+`__dirname and  __filename`
+```javascript
+console.log(__dirname);
+console.log(__filename);
+```
+
+
+```javascript
+// path module 
+const path = require('path');
+// console.log(path);
+
+const extensionName = path.extname("index.html");
+console.log(extensionName);
+
+const joinName = path.join(__dirname + '/practice');
+console.log(joinName);
+
+const joinName2 = path.join(__dirname + '/../views');
+console.log(joinName2);
+```
+
+
+
+
+
+
+
