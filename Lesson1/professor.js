@@ -1,0 +1,3 @@
+exports.profession = () => {
+    return "Teaching";
+}
