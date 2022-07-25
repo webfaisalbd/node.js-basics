@@ -109,6 +109,7 @@ console.log(profession());
 
 
 #### Built in Module
+##### fs module
 `Fs means file system`
 `fs module have many methods like as:`
 - writeFile()  ||  writeFileSync()
@@ -184,4 +185,22 @@ fs.exists("demo2.txt", (result)=> {
 // - use syncronous fs library like fs.writeFileSync, fs.readFileSync etc.
 // - remove callback function
 
+```
+
+
+##### os module
+`OS module means operating system`
+`OS module provides information about the computer's operating system. `
+```javascript
+// os 
+// OS module provides information about the computer's operating system. 
+const os = require('os');
+const { totalmem, freemem } = require('os');
+
+// console.log(os);
+console.log(os.userInfo());
+console.log(os.homedir());
+console.log(os.hostname());
+console.log(totalmem());
+console.log(freemem());
 ```
