@@ -235,7 +235,6 @@ console.log(joinName2);
 
 
 
-
 ##### http module
 `To create http server`
 
@@ -281,6 +280,59 @@ ourServer.listen(ourPort,()=> {
 ```
 
 
+##### For request to the server, there are some common methods: 
+- get()
+- post()
+- delete()
+- put()
+- head()
+
+##### In response, we will get two things:
+- status code
+- data(head and body)
+
+##### HTTP status code:
+1. informational response(100-199)
+2. successful response(200-299)
+3. redirects(300-399)
+4. client errors(400-499)
+5. server errors(500-599)
+
+- set (status code and data) on head
+```javascript
+const http = require("http");
+
+const port = 3000;
+const hostname = '127.0.0.1';
+
+// 'Content':'Type':'text/plain' 
+const myServer = http.createServer((req, res)=> {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.write("Hello my world");
+    res.write("\n");
+    res.write("Hello my world2");
+    res.end();
+})
+
+myServer.listen(port,()=> {
+    console.log(`My server run at http://${hostname}:${port}`);
+})
+
+// 'Content':'Type':'text/html'
+const port2 = 4000;
+const hostname2 = '127.0.0.1';
+
+const ourServer = http.createServer((req,res)=> {
+    res.writeHead(201,{'Content-Type':'text/html'});
+    res.write('<h4>Hello, Hi<h4>');
+    res.write('<h4>Hello2, Hi2<h4>');
+    res.end();
+});
+ourServer.listen(port2,hostname2,()=> {
+    console.log(`Our msg runs at http://${hostname2}:${port2}`);
+})
+
+```
 
 
 
