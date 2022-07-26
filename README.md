@@ -336,5 +336,32 @@ ourServer.listen(port2,hostname2,()=> {
 
 
 
+#### External Modules
+`package example:`
+- random-fruits-name
+- nodemon
+
+`How to use external modules/ packages`
+- firstly, initialized the npm (npm init or npm init -y)
+- then, install packages and read documentation
 
 
+
+- package.json এর কাজ হচ্ছে সম্পূর্ণ প্রজেক্ট এর একটা সামারি রাখা। এই প্রজেক্ট টা যদি অন্য কোনো প্যাকেজ এর উপর নির্ভর করে, তবে তাকে package.js এ ডিপেন্ডেন্সি হিসেবে রাখবে।  
+
+
+```javascript
+// random-fruits-name external packages
+const randomFruitsName = require('random-fruits-name');
+// console.log(randomFruitsName('en'));
+
+
+// name-to-imdb external packages
+var nameToImdb = require("name-to-imdb");
+nameToImdb("3 idiots", function(err, res, inf) { 
+  console.log(res); // "tt0121955"
+  // inf contains info on where we matched that name - e.g. metadata, or on imdb
+  // and the meta object with all the available data
+  console.log(inf);
+})
+```
