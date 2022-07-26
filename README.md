@@ -424,3 +424,17 @@ server.listen(port, hostName, () => {
     console.log(`Server is running at  http://${hostName}:${port}`);
 })
 ```
+
+#### For hosting heroku
+- using heroku port so, use below line:
+`const PORT = process.env.PORT;`
+
+- create Procfile on route file
+- inside the Procfile, write:
+`web: node index.js`
+
+
+- some steps on heroku:
+- `npm install -g heroku`
+- `heroku --version`
+
