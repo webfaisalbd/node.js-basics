@@ -365,3 +365,23 @@ nameToImdb("3 idiots", function(err, res, inf) {
   console.log(inf);
 })
 ```
+
+
+#### Nodemon
+##### How to install and run nodemon package
+- `npm install nodemon`
+
+- and also set `"start": "nodemon index.js"` in scripts file in package.json
+
+- and final scripts in package.json file looks like this image:
+```javascript
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+```
+
+- full index.js file and package.json file image below there:
+<p align='center'>
+  <img src="./images/nodemon.PNG" width="500" title="nodemon">
+</p>
